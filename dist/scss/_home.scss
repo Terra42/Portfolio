@@ -1,0 +1,60 @@
+.home {
+  @include background;
+  color: set-text-color($secondary-color);
+  background: linear-gradient(
+      to right,
+      rgba($secondary-color, 0.98),
+      rgba($secondary-color, 0.7)
+    ),
+    url('../img/background_side.jpg') center top;
+  background-size: cover;
+  padding-top: 25vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__name {
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid $accent-color;
+    max-width: 80%;
+  }
+
+  .arrows {
+    position: absolute;
+    bottom: 5rem;
+    left: calc(50% - 21px);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    .fas {
+      @include transition-ease;
+      color: $accent-color;
+    }
+
+    &:hover > .fas {
+      color: set-text-color($secondary-color);
+      animation: bounce 2s infinite;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
