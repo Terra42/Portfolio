@@ -1,0 +1,64 @@
+.about {
+  @include background;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+
+  &__img {
+    max-width: 10rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+  }
+
+  &__link {
+    color: $secondary-color;
+    font-weight: 600;
+    text-decoration: underline;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  &__btn {
+    @extend .button;
+  }
+}
+
+@media screen and (min-width: $md-breakpoint) {
+  .about {
+    &__img {
+      max-width: 12rem;
+    }
+  }
+}
+
+@media screen and (min-width: $lg-breakpoint) {
+  .about {
+    &__img {
+      max-width: 15rem;
+      margin-bottom: 0;
+    }
+
+    &__container {
+      display: flex;
+      margin-bottom: 2rem;
+      justify-content: space-around;
+      width: 80%;
+    }
+
+    &__text {
+      text-align: left;
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: $xl-breakpoint) {
+  .about {
+    &__img {
+      max-width: 15rem;
+    }
+  }
+}

@@ -13,6 +13,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
 
   &__name {
     font-size: 4rem;
@@ -20,10 +21,10 @@
     margin: 1rem 0;
     padding-bottom: 1rem;
     border-bottom: 3px solid $accent-color;
-    max-width: 80%;
+    max-width: 90%;
   }
 
-  .arrows {
+  &__arrows {
     position: absolute;
     bottom: 5rem;
     left: calc(50% - 21px);
@@ -56,5 +57,56 @@
   }
   60% {
     transform: translateY(-15px);
+  }
+}
+
+@media screen and (min-width: $md-breakpoint) {
+  .home {
+    padding-top: 35vh;
+
+    &__name {
+      font-size: 4.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    &__arrows {
+      bottom: 3rem;
+    }
+
+    &__arrows .fas {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media screen and (min-width: $lg-breakpoint) {
+  .home {
+    padding-top: 30vh;
+    background: linear-gradient(
+        to right,
+        rgba($secondary-color, 0.98),
+        rgba($secondary-color, 0.7)
+      ),
+      url('../img/background_front.jpg') center top;
+    background-size: cover;
+
+    &__name {
+      font-size: 5rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    &__arrows {
+      bottom: 2rem;
+    }
+
+    &__arrows .fas {
+      font-size: 4rem;
+    }
   }
 }

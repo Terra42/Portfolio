@@ -22,6 +22,16 @@ const closeMenu = () => {
 
 navItems.forEach((item) => item.addEventListener('click', closeMenu));
 
+// mark active nav link
+const navLinks = document.querySelectorAll('.menu-nav__link');
+
+const markActive = (event) => {
+  navLinks.forEach((item) => item.classList.remove('active'));
+  event.target.classList.add('active');
+};
+
+navLinks.forEach((item) => item.addEventListener('click', markActive));
+
 // toggle menu
 
 const toggleMenu = () => {
@@ -41,43 +51,17 @@ menuBtn.addEventListener('click', toggleMenu);
 // show header
 
 const header = document.querySelector('#header');
-const headerTitle = document.querySelector('#header-title');
 const about = document.querySelector('#about');
-const skills = document.querySelector('#skills');
-const projects = document.querySelector('#projects');
-const contacts = document.querySelector('#contacts');
-const home = document.querySelector('#home');
 
 const showHeader = () => {
   let aboutPosition = about.offsetTop - window.scrollY;
-  let skillsPosition = skills.offsetTop - window.scrollY;
-  let projectsPosition = projects.offsetTop - window.scrollY;
-  let contactsPosition = contacts.offsetTop - window.scrollY;
-
-  console.log(aboutPosition);
 
   if (aboutPosition <= 70) {
-    headerTitle.textContent = 'About Me';
     header.classList.add('scroll');
-    headerTitle.classList.add('scroll');
-  }
-
-  if (skillsPosition < 10) {
-    headerTitle.textContent = 'Skills';
-  }
-
-  if (projectsPosition < 10) {
-    headerTitle.textContent = 'Projects';
-  }
-
-  if (contactsPosition < 10) {
-    headerTitle.textContent = 'Contact me';
   }
 
   if (aboutPosition > 100) {
-    headerTitle.textContent = '';
     header.classList.remove('scroll');
-    headerTitle.classList.remove('scroll');
   }
 };
 

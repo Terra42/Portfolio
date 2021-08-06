@@ -17,13 +17,33 @@
     flex-flow: column;
     align-items: center;
     width: 80px;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     margin: 0 2rem;
   }
 
   & .fab,
   .fas {
     color: $secondary-color;
-    margin: 1rem;
+    margin: 0.8rem;
+    @include transition-ease;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+@media screen and (min-width: $md-breakpoint) {
+  .skills .fab {
+    font-size: 3.5rem;
+  }
+  .skills .fas {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (min-width: $lg-breakpoint) {
+  .skills__list {
+    width: 80%;
   }
 }
