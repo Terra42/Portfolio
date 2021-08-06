@@ -44,7 +44,7 @@ html {
 
 .home__arrows {
   position: absolute;
-  bottom: 5rem;
+  bottom: 8rem;
   left: calc(50% - 21px);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -257,6 +257,7 @@ html {
 
 .nav.open {
   visibility: visible;
+  z-index: 5;
 }
 
 .nav .menu-nav {
@@ -738,7 +739,7 @@ html {
           flex-direction: column;
   cursor: pointer;
   padding-top: 2rem;
-  z-index: 3;
+  z-index: 1;
 }
 
 .footer__arrows .fas {

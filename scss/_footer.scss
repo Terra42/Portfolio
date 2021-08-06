@@ -19,7 +19,7 @@
     flex-direction: column;
     cursor: pointer;
     padding-top: 2rem;
-    z-index: 3;
+    z-index: 1;
 
     .fas {
       @include transition-ease;

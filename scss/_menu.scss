@@ -94,6 +94,7 @@
 
   &.open {
     visibility: visible;
+    z-index: 5;
   }
 
   .menu-nav {
