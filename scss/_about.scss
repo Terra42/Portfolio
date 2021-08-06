@@ -21,8 +21,18 @@
     }
   }
 
+  &__text {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
   &__btn {
     @extend .button;
+
+    &-link {
+      text-align: center;
+    }
   }
 }
 
@@ -51,6 +61,10 @@
     &__text {
       text-align: left;
       width: 50%;
+    }
+
+    &__btn-link {
+      align-self: flex-start;
     }
   }
 }
