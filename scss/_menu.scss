@@ -30,7 +30,7 @@
 
 .menu-btn {
   position: absolute;
-  z-index: 10;
+  z-index: 9;
   left: 1rem;
   top: 3vh;
   height: 20px;
@@ -70,6 +70,7 @@
     &.open {
       transform: rotate(720deg);
       background: transparent;
+      z-index: 9;
 
       &::before {
         transform: rotate(45deg) translate(5px, 8px);
@@ -94,7 +95,6 @@
 
   &.open {
     visibility: visible;
-    z-index: 5;
   }
 
   .menu-nav {
