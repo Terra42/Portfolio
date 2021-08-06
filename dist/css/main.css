@@ -430,11 +430,11 @@ html {
 .about__link {
   color: #0a20ad;
   font-weight: 600;
-  text-decoration: underline;
 }
 
 .about__link:hover {
   color: #48b9f1;
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 768px) {

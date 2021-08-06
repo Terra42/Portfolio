@@ -14,10 +14,10 @@
   &__link {
     color: $secondary-color;
     font-weight: 600;
-    text-decoration: underline;
 
     &:hover {
       color: $accent-color;
+      text-decoration: underline;
     }
   }
 
