@@ -52,16 +52,56 @@ menuBtn.addEventListener('click', toggleMenu);
 
 const header = document.querySelector('#header');
 const about = document.querySelector('#about');
+const skills = document.querySelector('#skills');
+const projects = document.querySelector('#projects');
+const contacts = document.querySelector('#contacts');
+const home = document.querySelector('#home');
+
+const homeLink = document.querySelector('#home-link');
+const aboutLink = document.querySelector('#about-link');
+const skillsLink = document.querySelector('#skills-link');
+const projectsLink = document.querySelector('#projects-link');
+const contactsLink = document.querySelector('#contact-link');
 
 const showHeader = () => {
   let aboutPosition = about.offsetTop - window.scrollY;
+  let skillsPosition = skills.offsetTop - window.scrollY;
+  let projectsPosition = projects.offsetTop - window.scrollY;
+  let contactsPosition = contacts.offsetTop - window.scrollY;
+
+  console.log(aboutPosition);
 
   if (aboutPosition <= 70) {
     header.classList.add('scroll');
+
+    if (aboutPosition < 10) {
+      homeLink.classList.remove('active');
+      aboutLink.classList.add('active');
+      skillsLink.classList.remove('active');
+    }
+  }
+
+  if (skillsPosition < 10) {
+    aboutLink.classList.remove('active');
+    skillsLink.classList.add('active');
+    projectsLink.classList.remove('active');
+  }
+
+  if (projectsPosition < 10) {
+    skillsLink.classList.remove('active');
+    projectsLink.classList.add('active');
+    contactsLink.classList.remove('active');
+  }
+
+  if (contactsPosition < 10) {
+    projectsLink.classList.remove('active');
+    contactsLink.classList.add('active');
   }
 
   if (aboutPosition > 100) {
     header.classList.remove('scroll');
+    homeLink.classList.add('active');
+    aboutLink.classList.remove('active');
   }
 };
 
