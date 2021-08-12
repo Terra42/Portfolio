@@ -43,17 +43,20 @@
             >
           </li>
           <li class="menu-nav__item">
-            <a href="#skills" class="menu-nav__link" id="skills-link">Skills</a>
-          </li>
-          <li class="menu-nav__item">
             <a href="#projects" class="menu-nav__link" id="projects-link"
               >Projects</a
             >
           </li>
           <li class="menu-nav__item">
+            <a href="#skills" class="menu-nav__link" id="skills-link">Skills</a>
+          </li>
+          <li class="menu-nav__item">
             <a href="#contacts" class="menu-nav__link" id="contact-link"
               >Contact Me</a
             >
+          </li>
+          <li class="menu-nav__item">
+            <a href="#blog" class="menu-nav__link" id="blog-link">Blog</a>
           </li>
         </ul>
       </nav>
@@ -75,8 +78,30 @@
           <h2>Who am I?</h2>
           <div class="divider"></div>
           <div class="about__container">
-            <div class="img-container">
-              <img src="img/me_crayon.jpg" alt="Foto" class="about__img" />
+            <div class="flip-card">
+              <div class="flip-card--inner">
+                <div class="flip-card--front">
+                  <div class="flip-card__img"></div>
+                </div>
+                <div class="flip-card--back">
+                  <h1>Petra Zemanová</h1>
+                  <p>Frontend developer</p>
+                  <div class="flip-card__social-icons">
+                    <a
+                      href="https://www.linkedin.com/in/petra-zemanov%C3%A1-090115170/"
+                      target="_blank"
+                    >
+                      <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/Terra42" target="_blank">
+                      <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="mailto:zemape42@gmail.com" target="_blank">
+                      <i class="fas fa-envelope fa-2x"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="about__text">
               <p>
@@ -103,13 +128,44 @@
                 very cool <a href="#projects" class="about__link">projects</a>,
                 where I have been able to put my skills into practice.
               </p>
-              <a
-                href="Petra Zemanova_CV.pdf"
-                target="_blank"
-                class="about__btn-link"
-              >
-                <div class="about__btn">Download CV</div>
-              </a>
+            </div>
+          </div>
+          <a
+            href="Petra Zemanova_CV.pdf"
+            target="_blank"
+            class="about__btn-link"
+          >
+            <div class="about__btn">Download CV</div>
+          </a>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <div class="section-content">
+          <h2>Projects</h2>
+          <div class="divider white"></div>
+          <div class="projects__container">
+            <div class="project">
+              <div class="project__img"></div>
+              <div class="project__text">
+                <h3 class="project__title">Medivé Veselí</h3>
+                <p class="project__description">HTML, CSS (SASS), JavaScript</p>
+              </div>
+              <button class="project__btn">Show more</button>
+            </div>
+            <div class="project">
+              <div class="project__img"></div>
+              <p class="project__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <button class="project__btn">Show more</button>
+            </div>
+            <div class="project">
+              <div class="project__img"></div>
+              <p class="project__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <button class="project__btn">Show more</button>
             </div>
           </div>
         </div>
@@ -122,7 +178,7 @@
           <ul class="skills__list">
             <li><i class="fab fa-html5 fa-2x"></i>HTML5</li>
             <li><i class="fab fa-css3-alt fa-2x"></i>CSS3</li>
-            <li><i class="fab fa-js fa-2x"></i>Javascript</li>
+            <li><i class="fab fa-js fa-2x"></i>JavaScript</li>
             <li><i class="fab fa-react fa-2x"></i>React</li>
             <li><i class="fab fa-vuejs fa-2x"></i>Vue.js</li>
             <li><i class="fab fa-bootstrap fa-2x"></i>Bootstrap</li>
@@ -132,38 +188,10 @@
         </div>
       </section>
 
-      <section class="projects" id="projects">
-        <div class="section-content">
-          <h2>Projects</h2>
-          <div class="divider"></div>
-          <div class="tbd">
-            <p>I am currently working on this section</p>
-            <div class="circle-wrapper">
-              <div class="circle"></div>
-              <div class="icon">
-                <i class="fas fa-tools fa-5x"></i>
-              </div>
-            </div>
-          </div>
-          <div class="project">
-            <div class="project__picture"></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-          <div class="project">
-            <div class="project__picture"></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-          <div class="project">
-            <div class="project__picture"></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-      </section>
-
       <section class="contacts" id="contacts">
         <div class="section-content">
           <h2>Contact me</h2>
-          <div class="divider"></div>
+          <div class="divider white"></div>
           <h3>Let's chat!</h3>
           <p>
             Want to get in touch? Feel free to shoot me a message and I'll get
@@ -207,6 +235,23 @@
           </form>
         </div>
       </section>
+
+      <section class="blog" id="blog">
+        <div class="section-content">
+          <h2>Blog</h2>
+          <div class="divider"></div>
+          <div class="tbd">
+            <p>I am currently working on this section</p>
+            <div class="circle-wrapper">
+              <div class="circle"></div>
+              <div class="icon">
+                <i class="fas fa-tools fa-5x"></i>
+              </div>
+            </div>
+            <p>(You can make me go faster by pressing this icon)</p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -218,7 +263,6 @@
           </a>
         </div>
         <div class="footer__content">
-          <p class="footer__social">Please check my social links:</p>
           <div class="footer__social-icons">
             <a
               href="https://www.linkedin.com/in/petra-zemanov%C3%A1-090115170/"

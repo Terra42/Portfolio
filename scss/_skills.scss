@@ -29,6 +29,7 @@
 
     &:hover {
       color: $accent-color;
+      animation: bounce 2s infinite;
     }
   }
 }

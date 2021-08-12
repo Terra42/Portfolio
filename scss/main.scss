@@ -1,5 +1,5 @@
 @import 'config', 'home', 'menu', 'about', 'skills', 'projects', 'contacts',
-  'footer';
+  'blog', 'footer';
 
 body {
   background-color: $primary-color;
@@ -45,9 +45,6 @@ main {
 
 .button {
   @include transition-ease;
-  background-color: $primary-color;
-  border: 2px solid $accent-color;
-  color: $accent-color;
   padding: 0.5rem 1.5rem;
   border-radius: 25px;
   font-size: 1rem;
@@ -68,6 +65,7 @@ main {
   flex-flow: column;
   align-items: center;
   margin-top: 15vh;
+  margin-bottom: 15vh;
 
   h2 {
     font-size: 2rem;
@@ -88,6 +86,26 @@ main {
   width: 15vw;
   background-color: $secondary-color;
   margin-bottom: 3rem;
+}
+
+.white {
+  background-color: $primary-color;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 @media screen and (min-width: $md-breakpoint) {
@@ -113,7 +131,6 @@ main {
     padding: 0.8rem 1.5rem;
     font-size: 1.2rem;
     width: 15rem;
-    border: 3px solid $accent-color;
     margin-top: 2rem;
   }
 

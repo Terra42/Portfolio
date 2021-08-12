@@ -4,6 +4,12 @@
   flex-flow: column;
   align-items: center;
   text-align: center;
+  background-color: rgba($secondary-color, 0.9);
+  color: $primary-color;
+
+  .section-content h2 {
+    color: white;
+  }
 
   &__form {
     display: flex;
@@ -19,13 +25,20 @@
 
     &:focus {
       outline: none;
-      border: 2px solid $accent-color;
+      background-color: #d9f1fc;
     }
   }
 
   &__btn {
     @extend .button;
     margin: 1rem auto;
+    background-color: transparent;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+
+    &:hover {
+      border: 2px solid $accent-color;
+    }
   }
 
   textarea {
@@ -42,6 +55,14 @@
 
     &__form {
       margin-bottom: 4rem;
+    }
+
+    &__btn {
+      border: 3px solid $primary-color;
+
+      &:hover {
+        border: 3px solid $accent-color;
+      }
     }
   }
 }

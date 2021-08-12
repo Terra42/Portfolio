@@ -140,7 +140,7 @@
   color: $accent-color;
 }
 
-@for $i from 1 through 5 {
+@for $i from 1 through 6 {
   .menu-nav__item:nth-child(#{$i}) {
     transition-delay: ($i * 0.1s) + 0.15s;
   }
