@@ -15,31 +15,33 @@
     flex-flow: column;
 
     .project {
-      margin-bottom: 1rem;
+      margin: 0 1rem 1rem 1rem;
       position: relative;
-      width: 15rem;
-      height: 15rem;
+      width: 16rem;
+      height: 16rem;
+
+      &:hover > .project__img {
+        opacity: 0;
+      }
 
       &:hover > .project__text {
         opacity: 1;
+        top: 3rem;
       }
 
-      &:hover > .project__btn {
+      &:hover > .project__buttons {
         opacity: 1;
+        bottom: 3rem;
       }
 
       &__img {
         background-image: url('../img/img_example.jpg');
         background-position: center;
         background-size: cover;
-        width: 15rem;
-        height: 15rem;
+        width: 100%;
+        height: 100%;
         border-radius: 5%;
         transition: opacity 0.5s;
-
-        &:hover {
-          opacity: 0;
-        }
       }
 
       &__text {
@@ -47,32 +49,90 @@
         color: $primary-color;
         opacity: 0;
         text-align: center;
-        z-index: 2;
+        z-index: 1;
         left: 0;
         position: absolute;
         top: 0;
         width: 100%;
+
+        p {
+          color: $accent-color;
+        }
+      }
+
+      &__buttons {
+        @include transition-ease;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        opacity: 0;
       }
 
       &__btn {
         @extend .button;
         background-color: transparent;
         color: $primary-color;
-        border: 2px solid $primary-color;
+        border: 2px solid $accent-color;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        z-index: 1;
+        flex-basis: 7rem;
 
         &:hover {
           border: 2px solid $accent-color;
         }
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        opacity: 0;
-        text-align: center;
-        transition: all 0.3s ease-in-out;
-        z-index: 2;
       }
+
+      .preview {
+        background-color: $accent-color;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+#project1 {
+  background-image: url('../img/medive_intro.png');
+}
+
+#project2 {
+  background-image: url('../img/scissors_intro.png');
+}
+
+#project3 {
+  background-image: url('../img/4U_intro.png');
+}
+
+#project4 {
+  background-image: url('../img/audiozpravy_intro.png');
+}
+
+#project5 {
+  background-image: url('../img/portfolio_intro.png');
+}
+
+@media screen and (min-width: $md-breakpoint) {
+  .projects__container {
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .project {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: $xl-breakpoint) {
+  .projects__container {
+    .project {
+      width: 20rem;
+      height: 20rem;
     }
   }
 }

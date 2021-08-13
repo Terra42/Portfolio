@@ -672,33 +672,35 @@ html {
 }
 
 .projects__container .project {
-  margin-bottom: 1rem;
+  margin: 0 1rem 1rem 1rem;
   position: relative;
-  width: 15rem;
-  height: 15rem;
+  width: 16rem;
+  height: 16rem;
+}
+
+.projects__container .project:hover > .project__img {
+  opacity: 0;
 }
 
 .projects__container .project:hover > .project__text {
   opacity: 1;
+  top: 3rem;
 }
 
-.projects__container .project:hover > .project__btn {
+.projects__container .project:hover > .project__buttons {
   opacity: 1;
+  bottom: 3rem;
 }
 
 .projects__container .project__img {
   background-image: url("../img/img_example.jpg");
   background-position: center;
   background-size: cover;
-  width: 15rem;
-  height: 15rem;
+  width: 100%;
+  height: 100%;
   border-radius: 5%;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
-}
-
-.projects__container .project__img:hover {
-  opacity: 0;
 }
 
 .projects__container .project__text {
@@ -707,31 +709,98 @@ html {
   color: #ffffff;
   opacity: 0;
   text-align: center;
-  z-index: 2;
+  z-index: 1;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
 }
 
+.projects__container .project__text p {
+  color: #48b9f1;
+}
+
+.projects__container .project__buttons {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  opacity: 0;
+}
+
 .projects__container .project__btn {
   background-color: transparent;
   color: #ffffff;
-  border: 2px solid #ffffff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  opacity: 0;
+  border: 2px solid #48b9f1;
   text-align: center;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  z-index: 2;
+  z-index: 1;
+  -ms-flex-preferred-size: 7rem;
+      flex-basis: 7rem;
 }
 
 .projects__container .project__btn:hover {
   border: 2px solid #48b9f1;
+}
+
+.projects__container .project .preview {
+  background-color: #48b9f1;
+}
+
+.projects__container .project .preview:hover {
+  background-color: transparent;
+}
+
+#project1 {
+  background-image: url("../img/medive_intro.png");
+}
+
+#project2 {
+  background-image: url("../img/scissors_intro.png");
+}
+
+#project3 {
+  background-image: url("../img/4U_intro.png");
+}
+
+#project4 {
+  background-image: url("../img/audiozpravy_intro.png");
+}
+
+#project5 {
+  background-image: url("../img/portfolio_intro.png");
+}
+
+@media screen and (min-width: 768px) {
+  .projects__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .projects__container .project {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects__container .project {
+    width: 20rem;
+    height: 20rem;
+  }
 }
 
 .contacts {
