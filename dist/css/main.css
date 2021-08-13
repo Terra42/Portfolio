@@ -548,9 +548,9 @@ html {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 80%;
   }
   .about__text {
@@ -560,6 +560,16 @@ html {
   .about .flip-card {
     width: 15rem;
     height: 20rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about__container {
+    width: 60%;
+  }
+  .about__text {
+    text-align: left;
+    width: 50%;
   }
 }
 

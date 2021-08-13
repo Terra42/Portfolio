@@ -129,7 +129,7 @@
       flex-flow: row;
       margin-bottom: 2rem;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
       width: 80%;
     }
 
@@ -141,6 +141,19 @@
     .flip-card {
       width: 15rem;
       height: 20rem;
+    }
+  }
+}
+
+@media screen and (min-width: $xl-breakpoint) {
+  .about {
+    &__container {
+      width: 60%;
+    }
+
+    &__text {
+      text-align: left;
+      width: 50%;
     }
   }
 }
